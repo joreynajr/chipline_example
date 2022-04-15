@@ -16,18 +16,29 @@ For R we need:
 ```
 qsub -I -l walltime=200:00:00,mem=20gb
 ```
+
+Create a new environment
 ```
-mamba env create -n chipline r-base=3.4.3 r-essentials
+mamba create -n chipline r-base=3.4.3 r-essentials
 ```
 
+Clone the phantompeakqualtools repository
 ```
 git clone https://github.com/kundajelab/phantompeakqualtools
 ```
 
+Navigate to the phantompeakqualtools directory
 ```
-$ cd phantompeakqualtools
-$ R
-(From within R)
+cd phantompeakqualtools
+```
+
+Start R session
+```
+R
+```
+
+Install R packages (as instructed by phantompeakqualtools
+```
 install.packages("snow", repos="http://cran.us.r-project.org")
 install.packages("snowfall", repos="http://cran.us.r-project.org")
 install.packages("bitops", repos="http://cran.us.r-project.org")
