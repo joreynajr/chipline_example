@@ -37,6 +37,11 @@ Navigate to the phantompeakqualtools directory
 cd phantompeakqualtools
 ```
 
+Install clang for compiling
+```
+mamba install -c conda-forge clang
+```
+
 Start R session
 ```
 R
