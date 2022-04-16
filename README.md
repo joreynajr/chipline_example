@@ -39,7 +39,7 @@ cd phantompeakqualtools
 
 Install clang for compiling
 ```
-mamba install -c conda-forge clang
+mamba install -c conda-forge/label/broken clang=14.0.0
 ```
 
 Start R session
