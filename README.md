@@ -22,6 +22,11 @@ Create a new environment
 mamba create -n chipline -c r r-base==3.4.3 r-essentials
 ```
 
+Activate the chipline 
+```
+mamba activate chipline
+```
+
 Clone the phantompeakqualtools repository
 ```
 git clone https://github.com/kundajelab/phantompeakqualtools
