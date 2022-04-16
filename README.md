@@ -52,3 +52,11 @@ source("http://bioconductor.org/biocLite.R")
 biocLite("Rsamtools",suppressUpdates=TRUE)
 install.packages("./spp_1.14.tar.gz")
 ```
+
+
+# Other notes
+May need to run an installion of the tbb package which is a dependency of Bowtie2:
+```
+mamba install tbb=2020.2
+```
+
