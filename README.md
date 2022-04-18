@@ -65,4 +65,6 @@ mamba install tbb=2020.2
 ```
 - Main problem is clang++. I can get clang but I can't get clang++. I tried to do this through mamba but it hasn't worked. Could I install it directly?
 
+# Attempt #1: R 3.6.1 from the shared
+/share/apps/R/3.6.1/bin/R
 
