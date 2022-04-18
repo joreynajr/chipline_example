@@ -58,6 +58,54 @@ biocLite("Rsamtools",suppressUpdates=TRUE)
 install.packages("./spp_1.14.tar.gz")
 ```
 
+# Attempt #2: Relying on Mamba and R 3.6.1
+- R 3.6.1 (The ChiPLine notes actually say to use R 3.4.3 but caTools is not available for it)
+
+```
+qsub -I -l walltime=200:00:00,mem=20gb
+```
+
+Create a new environment
+```
+mamba create -n chipline -c r r-base==3.4.3 r-essentials
+```
+
+Activate the chipline 
+```
+mamba activate chipline
+```
+
+Clone the phantompeakqualtools repository
+```
+git clone https://github.com/kundajelab/phantompeakqualtools
+```
+
+Navigate to the phantompeakqualtools directory
+```
+cd phantompeakqualtools
+```
+
+Install clang for compiling
+```
+mamba install -c conda-forge/label/broken clang=14.0.0
+```
+
+Start R session
+```
+R
+```
+
+Install R packages (as instructed by phantompeakqualtools
+```
+install.packages("snow", repos="http://cran.us.r-project.org")
+install.packages("snowfall", repos="http://cran.us.r-project.org")
+install.packages("bitops", repos="http://cran.us.r-project.org")
+install.packages("caTools", repos="http://cran.us.r-project.org")
+source("http://bioconductor.org/biocLite.R")
+biocLite("Rsamtools",suppressUpdates=TRUE)
+install.packages("./spp_1.14.tar.gz")
+```
+
 # Other notes
 - May need to run an installion of the tbb package which is a dependency of Bowtie2:
 ```
