@@ -115,6 +115,7 @@ mamba install tbb=2020.2
 /share/apps/R/3.6.1/bin/R
 
 ```
+install.packages("devtools")
 require(devtools)
 devtools::install_github('hms-dbmi/spp', build_vignettes = FALSE)
 ```
