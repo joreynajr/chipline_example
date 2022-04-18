@@ -1,4 +1,4 @@
-# chipline_example
+# ChIPLine Example
 Attempting to install and run the ChIPLine Pipeline. Following the main instructions located over here: https://github.com/ay-lab/ChIPLine. There are several packages but I am mostly worried about setting up the R-environment, everything else should work fine. Several of the specialized packages that we will need are actually coming from [phantompeakqualtools](https://github.com/kundajelab/phantompeakqualtools) and are already listed below. It is very important that phantompeakqualtools instructions are followed since they provide the clearest documentation for installing things like the `spp`package.
 
 For R we need:
