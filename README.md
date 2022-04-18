@@ -9,6 +9,7 @@ For R we need:
 - [ ] snowfall
 - [ ] bitops
 - [ ] Rsamtools (in Bioconductor)
+- [ ] spp
 
 # Attempt #1: Relying on Mamba
 - R 3.4.3
@@ -111,6 +112,15 @@ mamba install tbb=2020.2
 # Attempt #2b: R 3.6.1 from the shared
 /share/apps/R/3.6.1/bin/R
 
+- [x] R 3.4.3
+- [x] spp (1.14, 1.15.x)
+- [ ] caTools
+- [ ] snow
+- [ ] snowfall
+- [ ] bitops
+- [ ] Rsamtools (in Bioconductor)
+- [ ] spp
+
 ```
 install.packages("devtools")
 require(devtools)
@@ -125,4 +135,12 @@ if (!require("BiocManager", quietly = TRUE))
     install.packages("BiocManager")
 BiocManager::install("Rsamtools")
 install.packages("./spp_1.14.tar.gz")
+
+install.packages("remotes")
+library(remotes)
+
+install.packages("spp")
+
+install_version("spp", "1.14")
+
 ```
