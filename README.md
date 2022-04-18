@@ -96,11 +96,9 @@ install.packages("snow", repos="http://cran.us.r-project.org")
 install.packages("snowfall", repos="http://cran.us.r-project.org")
 install.packages("bitops", repos="http://cran.us.r-project.org")
 install.packages("caTools", repos="http://cran.us.r-project.org")
-#source("http://bioconductor.org/biocLite.R")
-#biocLite("Rsamtools",suppressUpdates=TRUE)
-#if (!require("BiocManager", quietly = TRUE))
-#    install.packages("BiocManager")
-#BiocManager::install("Rsamtools")
+if (!require("BiocManager", quietly = TRUE))
+    install.packages("BiocManager")
+BiocManager::install("Rsamtools")
 install.packages("./spp_1.14.tar.gz")
 ```
 
@@ -109,9 +107,8 @@ install.packages("./spp_1.14.tar.gz")
 ```
 mamba install tbb=2020.2
 ```
-- Main problem is clang++. I can get clang but I can't get clang++. I tried to do this through mamba but it hasn't worked. Could I install it directly?
 
-# Attempt #1: R 3.6.1 from the shared
+# Attempt #2b: R 3.6.1 from the shared
 /share/apps/R/3.6.1/bin/R
 
 ```
@@ -119,4 +116,13 @@ install.packages("devtools")
 require(devtools)
 devtools::install_github('hms-dbmi/spp', build_vignettes = FALSE)
 ```
-
+```
+install.packages("snow", repos="http://cran.us.r-project.org")
+install.packages("snowfall", repos="http://cran.us.r-project.org")
+install.packages("bitops", repos="http://cran.us.r-project.org")
+install.packages("caTools", repos="http://cran.us.r-project.org")
+if (!require("BiocManager", quietly = TRUE))
+    install.packages("BiocManager")
+BiocManager::install("Rsamtools")
+install.packages("./spp_1.14.tar.gz")
+```
