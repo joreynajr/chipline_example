@@ -67,7 +67,7 @@ qsub -I -l walltime=200:00:00,mem=20gb
 
 Create a new environment
 ```
-mamba create -n chipline -c r r-base==3.4.3 r-essentials
+mamba create -n chipline -c r r-base==3.6.1 r-essentials
 ```
 
 Activate the chipline 
@@ -85,11 +85,6 @@ Navigate to the phantompeakqualtools directory
 cd phantompeakqualtools
 ```
 
-Install clang for compiling
-```
-mamba install -c conda-forge/label/broken clang=14.0.0
-```
-
 Start R session
 ```
 R
@@ -101,8 +96,11 @@ install.packages("snow", repos="http://cran.us.r-project.org")
 install.packages("snowfall", repos="http://cran.us.r-project.org")
 install.packages("bitops", repos="http://cran.us.r-project.org")
 install.packages("caTools", repos="http://cran.us.r-project.org")
-source("http://bioconductor.org/biocLite.R")
-biocLite("Rsamtools",suppressUpdates=TRUE)
+#source("http://bioconductor.org/biocLite.R")
+#biocLite("Rsamtools",suppressUpdates=TRUE)
+#if (!require("BiocManager", quietly = TRUE))
+#    install.packages("BiocManager")
+#BiocManager::install("Rsamtools")
 install.packages("./spp_1.14.tar.gz")
 ```
 
@@ -115,4 +113,9 @@ mamba install tbb=2020.2
 
 # Attempt #1: R 3.6.1 from the shared
 /share/apps/R/3.6.1/bin/R
+
+```
+require(devtools)
+devtools::install_github('hms-dbmi/spp', build_vignettes = FALSE)
+```
 
