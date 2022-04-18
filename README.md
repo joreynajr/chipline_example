@@ -10,7 +10,7 @@ For R we need:
 - [ ] bitops
 - [ ] Rsamtools (in Bioconductor)
 
-# Attempt #1 relying on Mamba
+# Attempt #1: Relying on Mamba
 - R 3.4.3
 
 ```
