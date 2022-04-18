@@ -19,7 +19,7 @@ qsub -I -l walltime=200:00:00,mem=20gb
 
 Create a new environment
 ```
-mamba create -n chipline -c r r-base==3.4.3 r-essentials
+mamba create -n chipline -c r r-base=3.4.3 r-essentials
 ```
 
 Activate the chipline 
@@ -67,7 +67,7 @@ qsub -I -l walltime=200:00:00,mem=20gb
 
 Create a new environment
 ```
-mamba create -n chipline -c r r-base==3.6.1 r-essentials
+mamba create -n chipline -c conda-forge r-base=3.6.1 r-essentials
 ```
 
 Activate the chipline 
