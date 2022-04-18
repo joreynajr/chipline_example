@@ -114,18 +114,21 @@ mamba install tbb=2020.2
 
 - [x] R 3.4.3
 - [x] spp (1.14, 1.15.x)
-- [ ] caTools
-- [ ] snow
-- [ ] snowfall
-- [ ] bitops
-- [ ] Rsamtools (in Bioconductor)
-- [ ] spp
+- [x] caTools
+- [x] snow
+- [x] snowfall
+- [x] bitops
+- [x] Rsamtools (in Bioconductor)
+- [x] spp
 
+Saving this just in case but skip for now
 ```
 install.packages("devtools")
 require(devtools)
 devtools::install_github('hms-dbmi/spp', build_vignettes = FALSE)
 ```
+
+Install the first 5 packages
 ```
 install.packages("snow", repos="http://cran.us.r-project.org")
 install.packages("snowfall", repos="http://cran.us.r-project.org")
@@ -134,13 +137,15 @@ install.packages("caTools", repos="http://cran.us.r-project.org")
 if (!require("BiocManager", quietly = TRUE))
     install.packages("BiocManager")
 BiocManager::install("Rsamtools")
-install.packages("./spp_1.14.tar.gz")
+```
 
+Install spp using the remotes packages, a two step process
+```
 install.packages("remotes")
 library(remotes)
+install_version("spp", "1.15.3")
+```
 
-install.packages("spp")
-
-install_version("spp", "1.14")
-
+```
+When the prompt appears type 1 + Enter
 ```
