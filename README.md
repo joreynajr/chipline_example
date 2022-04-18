@@ -56,8 +56,9 @@ install.packages("caTools", repos="http://cran.us.r-project.org")
 source("http://bioconductor.org/biocLite.R")
 biocLite("Rsamtools",suppressUpdates=TRUE)
 install.packages("./spp_1.14.tar.gz")
-```
+```. 
 
+Main problem is clang++. I can get clang but I can't get clang++. I tried to do this through mamba but it hasn't worked. Could I install it directly?
 
 # Other notes
 May need to run an installion of the tbb package which is a dependency of Bowtie2:
